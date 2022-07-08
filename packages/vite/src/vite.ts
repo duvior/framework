@@ -44,10 +44,11 @@ export async function bundle (nuxt: Nuxt) {
           }
         },
         optimizeDeps: {
+          disabled: false,
           entries: [
             resolve(nuxt.options.appDir, 'entry.ts')
           ],
-          include: ['vue']
+          include: ['vue', 'vue-router']
         },
         css: resolveCSSOptions(nuxt),
         build: {
